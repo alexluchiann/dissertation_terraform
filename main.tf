@@ -17,9 +17,9 @@ provider "openstack" {
   application_credential_secret = var.os_app_cred_secret
 }
 
-resource "openstack_compute_instance_v2" "test_vm" {
-  name            = var.vm_name
-  image_id      = var.image_id
-  flavor_name     = var.flavor_name
-  key_pair        = "dizertie"
+module "network" {
+  source              = "./modules/network"
+  network_name        = var.network_name
+  network_admin_state = var.network_admin_state
+  k8s_sub_cidr        = var.k8s_sub_cidr
 }
