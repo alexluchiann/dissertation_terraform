@@ -1,7 +1,7 @@
 variable "network_name" {}
 variable "network_admin_state" {}
-variable "subnet_name" { default = "k8s-subnet" }
-variable "router_name" { default = "k8s-router" }
+variable "subnet_name" { default = "k8s_subnet" }
+variable "router_name" { default = "k8s_router" }
 variable "sg_control_plane" { default = "sg_control_plane" }
 variable "external_network_id" {}
 variable "k8s_sub_cidr" {}
