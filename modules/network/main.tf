@@ -46,7 +46,7 @@ resource "openstack_networking_secgroup_v2" "sg_control_plane" {
     description = "Control plane security group"
 }
 
-#Sg rules for control plane node
+#Sg rules for control    plane node
 resource "openstack_networking_secgroup_rule_v2" "sg_control_plane_rules_1" {
   security_group_id = openstack_networking_secgroup_v2.sg_control_plane.id
   ethertype         = var.ethertype
